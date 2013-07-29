@@ -3,9 +3,9 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
 class AboutArrays < Neo::Koan
   def test_creating_arrays
     empty_array = Array.new
-    assert_equal __, empty_array.class
-    assert_equal __, empty_array.size > 0
-    assert_equal __, empty_array.length
+    assert_equal Array, empty_array.class
+    assert_equal 0, empty_array.size
+    assert_equal 0, empty_array.length
   end
 
   def test_array_literals
