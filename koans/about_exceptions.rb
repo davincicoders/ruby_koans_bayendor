@@ -19,7 +19,7 @@ class AboutExceptions < Neo::Koan
     result = nil
     begin
       fail "Oops"
-    rescue StandardError => ex
+    rescue StandardError => exception
       result = :exception_handled
     end
 
