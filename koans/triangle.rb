@@ -13,7 +13,17 @@
 # and
 #   about_triangle_project_2.rb
 #
+
+
 def triangle(a, b, c)
+  # Test for errors here
+  side_lengths = [a,b,c]
+
+  if (a <=0 || b <= 0 || c <= 0) || (a>=b+c||b>=a+c||c>=a+b)
+    raise TriangleError
+  end
+
+  # Test for types here
   if a == b && a == c
     :equilateral
   elsif ((a == b) || (a == c)) || ( b == c)
